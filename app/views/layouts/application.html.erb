@@ -16,8 +16,25 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
-
   <body>
-    <%= yield %>
-  </body>
+    <% if current_admin %>
+      <div class="layout-container">
+        <aside class="sidebar">
+          <%= render 'layouts/navbar_left' %>
+        </aside>
+
+        <div class="main-content">
+          <header class="topbar">
+            <%= render 'layouts/navbar' %>
+          </header>
+
+          <section class="content">
+            <%= yield %>
+          </section>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
+</body>
 </html>

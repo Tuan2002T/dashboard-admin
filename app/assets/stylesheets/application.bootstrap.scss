@@ -1,2 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+//Base
+@import 'base/global';
+
+//Component
+@import 'components/navbar';
+@import 'components/navbar_left';
+
+//pages
+@import 'pages/dashboard';

@@ -36,11 +36,12 @@ gem "bootsnap", require: false
 
 gem 'devise'
 
-gem 'devise_token_auth'
 
 gem 'cssbundling-rails'
 
 gem 'jsbundling-rails'
+
+gem 'rack-cors'
 
 
 group :development, :test do
@@ -60,6 +61,8 @@ group :development do
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+
+  gem "pry-rails"
 end
 
 group :test do
@@ -67,3 +70,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "devise_token_auth", "~> 1.2"

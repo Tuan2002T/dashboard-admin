@@ -1,0 +1,118 @@
+// app/assets/stylesheets/dashboard.scss
+
+.dashboard {
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.114px;
+    padding: 20px;
+    margin: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 24px;
+      padding: 15px;
+    }
+  }
+
+  .total {
+    padding: 15px;
+    margin: 0;
+
+    .card {
+      background: #fff;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      }
+
+      .total-content {
+        .total-info {
+          flex: 1;
+          min-width: 0; // Prevent text overflow
+
+          .total-title {
+            color: #202224;
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-bottom: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+            @media (max-width: 576px) {
+              font-size: 14px;
+            }
+          }
+
+          .total-number {
+            color: #202224;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+            
+            @media (max-width: 576px) {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .total-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          background: #b1d8ff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 12px;
+          
+          @media (max-width: 576px) {
+            width: 40px;
+            height: 40px;
+          }
+
+          i {
+            font-size: 20px;
+            color: #0080ff;
+            
+            @media (max-width: 576px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .total-percentage {
+        padding-top: 16px;
+        margin-top: 12px;
+        // border-top: 1px solid rgba(0,0,0,0.05);
+
+        i {
+          font-size: 14px;
+          color: #00B69B;
+          margin-right: 4px;
+        }
+
+        .number {
+          color: #00B69B;
+          font-size: 14px;
+          font-weight: 600;
+          margin-right: 4px;
+        }
+
+        .text {
+          color: #00493e;
+          font-size: 14px;
+          font-weight: 500;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
