@@ -1,0 +1,100 @@
+.products{
+  padding: 30px;
+  h1{
+    color: #202224;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 23px;
+  }
+  .carousel{
+    height: 346px;
+    border-radius: 20px;
+
+    .carousel-inner{
+      height: 346px;
+      .carousel-item{
+        background-color: #4880FF;
+        border-radius: 20px;
+        height: 346px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .carousel-content{
+          width: 70%;
+          gap: 8px;
+          .content{
+            margin-bottom: 30px;
+            .date{
+              color: #FFF;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 30px;
+            }
+            .slogan{
+              color: #FFF;
+              font-size: 37px;
+              font-weight: 900;
+              line-height: 48px; 
+            }
+            .slogan:first-of-type {
+              margin-bottom: 0;
+            }
+            
+            .slogan:last-of-type {
+            }
+            
+            .content{
+              color: #FFF;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 30px;
+            }
+          }
+          button{
+            width: 156px;
+            height: 44px;
+            color: #FFF;
+            font-family: "Nunito Sans";
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 28px; 
+            letter-spacing: 1px;
+            border-radius: 11px;
+            background: #FF8743;
+          }
+
+          @media (max-width: 768px) {
+            .content{
+              margin-bottom: 30px;
+              .date{
+                font-size: 12px;
+              }
+              .slogan{
+                font-size: 30px;
+              }
+              .content{
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 40px; 
+      height: 40px;
+      background-color:black;
+      border-radius: 50%;
+      padding: 10px;
+      filter: invert(2);
+      background-size: 20px;
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+      background-color: rgba(0, 0, 0, 0.8); 
+    }
+  }
+}

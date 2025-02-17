@@ -85,4 +85,179 @@
       </div>
     </div>
   </div>
+
+  <div class="chart">
+    <div class="chart-header d-flex justify-content-between align-items-center mb-4">
+      <h2>Sales Details</h2>
+      <select class="form-select w-auto" aria-label="Default select example">
+        <option value="1">October</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <%= area_chart({
+      "01/01" => 200,
+      "05/01" => 400,
+      "10/01" => 300,
+      "15/01" => 600,
+      "20/01" => 200,
+      "25/01" => 500,
+      "30/01" => 300,
+      "05/02" => 700,
+      "10/02" => 400,
+      "15/02" => 800,
+      "20/02" => 500,
+      "25/02" => 600,
+      "28/02" => 400
+    }, 
+    colors: ["#b1d8ff"],
+    points: true,   
+    ) %>
+  </div>
+
+  <div class="deal-detail">
+    <div class="deal-header d-flex justify-content-between align-items-center mb-4">
+      <h2>Deals Details</h2>
+      <select class="form-select w-auto" aria-label="Default select example">
+        <option value="1">October</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Date - Time</th>
+            <th scope="col">Piece</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="align-middle">
+            <td>
+              <div class="d-flex align-items-center">
+                <img src="https://cdn.viettelstore.vn/Images/Product/ProductImage/1936510977.jpeg" 
+                    width="50" height="50" class="rounded me-2" alt="Apple Watch">
+                <p>Apple Watch</p>
+              </div>
+            </td>
+            <td>6096 Marjolaine Landing</td>
+            <td>12.09.2019 - 12.53 PM</td>
+            <td>423</td>
+            <td>$34,295</td>
+            <td>
+              <span>
+                Delivered
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="chart">
+    <div class="chart-header d-flex justify-content-between align-items-center mb-4">
+      <h2>Revenue</h2>
+      <select class="form-select w-auto" aria-label="Default select example">
+        <option value="1">October</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <%= area_chart([
+      {name:"Sales" ,data: {
+          "5K" => 20, "10K" => 40, "15K" => 30, "20K" => 60,
+          "25K" => 20, "30K" => 50, "35K" => 30, "40K" => 70,
+          "45K" => 40, "50K" => 80, "55K" => 50, "60K" => 60, "65K" => 40
+        }
+      },
+      {name:"Profit", data: {
+          "5K" => 20, "10K" => 150, "15K" => 90, "20K" => 60,
+          "25K" => 30, "30K" => 50, "35K" => 40, "40K" => 70,
+          "45K" => 10, "50K" => 80, "55K" => 90, "60K" => 60, "65K" => 10
+        }
+      }
+    ], 
+    colors: [ "#FF8F6DCC","#DBA5FF"],
+    points: false,
+    ) %>
+  </div>
+
+  <div class="chart-2">
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4 chart-content">
+        <div class="card h-100">
+          <div class="card-body p-3">
+            <%= pie_chart({
+              "New Customer" => 5000,
+              "Repeated" => 3000
+            }, 
+            colors: ["#b1d8ff", "#ffb1b1", "#aaffaa"], 
+            donut: true,
+            legend: 'bottom',
+            library: {
+              cutout: "70%",
+              elements: {
+                arc: {
+                  borderWidth: 5
+                }
+              },
+              plugins:{
+                title:{
+                  display: true,
+                  text: 'Customers',
+                  font: {
+                    size: 22,
+                    weight: 'bold'
+                  },
+                  align: 'start',
+                  padding: {
+                    bottom: 20
+                  }
+                }
+              }
+            }
+            ) %>
+          </div>
+        </div>
+      </div> 
+
+
+      <div class="col-12 col-sm-6 col-lg-4 chart-content">
+        <div class="card h-100">
+          <div class="card-body p-3">
+
+          </div>
+        </div>
+      </div> 
+
+
+      <div class="col-12 col-sm-6 col-lg-4 chart-content">
+        <div class="card h-100">
+          <div class="card-body p-3">
+            <%= line_chart([
+              { name: "Sales", data: {
+                  "2015" => 0, "10K" => 40, "2016" => 30, "2017" => 60, "2019" => 100
+                }
+              },
+              { name: "Profit", data: {
+                  "2015" => 20, "10K" => 40, "2016" => 30, "2017" => 60, "2019" => 20
+                }
+              }
+            ], 
+              colors: ["#FF8F6DCC", "#DBA5FF"],
+              points: true,
+              legend: false
+            ) %>
+
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
 </div>
