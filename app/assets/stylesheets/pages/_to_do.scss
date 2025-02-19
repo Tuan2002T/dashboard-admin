@@ -1,0 +1,85 @@
+.to-do{
+  padding: 30px;
+  .header{
+    margin-bottom: 50px;
+    h1{
+      color: #202224;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.114px;
+    }
+    .btn{
+      border-radius: 6px;
+      background: #4379EE;
+      color: #FFF;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 27px;
+      padding: 10px 26px;
+    }
+  }
+  .to-do-list{
+    .to-do-item{
+      padding: 22px;
+      border-radius: 12px;
+      border: 0.6px solid #D5D5D5;
+      background: #FBFCFF;
+      margin-bottom: 24px;
+      .card-body{
+        .form-check{
+          .form-check-input {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            border: 0.6px solid #D5D5D5;
+            background: #FBFCFF;
+            margin-right: 24px;
+            
+            &:checked {
+              background-color: #4379EE;
+              border-color: #FFF;
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+            
+            &:focus {
+              box-shadow: none;
+              border-color: #D5D5D5;
+            }
+          }
+          
+          .form-check-label{
+            color: #2E2E2E;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 27px;
+          }
+        }
+        .to-do-actions{
+          i{
+            font-size: 25px;
+            &:first-child{
+              color: #B3B3B3;
+              margin-right: 32px;
+            }
+            &:last-child{
+              color: #B3B3B3;
+            }
+          }
+        }
+      }
+    }
+
+    .active{
+      background-color: #4379EE;
+      .card-body{
+        .form-check{
+          .form-check-label{
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+}

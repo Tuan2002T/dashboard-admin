@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get "pricings/index"
-  get "product_stocks/index"
-  get "product_stock/index"
-  get "order_lists/index"
-  get "products/index"
-  get "product/index"
   resources :products, only: [:index] do
     collection do
       get :favorites
@@ -16,6 +10,16 @@ Rails.application.routes.draw do
   resources :product_stocks, only: [:index]
 
   resources :pricings, only: [:index]
+
+  resources :calenders, only: [:index]
+
+  resources :to_dos, only: [:index]
+
+  resources :contacts, only: [:index]
+
+  resources :invoices, only: [:index]
+
+  resources :teams, only: [:index]
   
   devise_for :admins
   

@@ -36,12 +36,32 @@
             <i class="bi bi-currency-dollar"></i> Pricing
           <% end %>
         </li>
-        <li><a href="#"><i class="bi bi-calendar2-week"></i>Calender</a></li>
-        <li><a href="#"><i class="bi bi-journal"></i>To-Do</a></li>
-        <li><a href="#"><i class="bi bi-people-fill"></i>Contact</a></li>
-        <li><a href="#"><i class="bi bi-cash-stack"></i>Invoice</a></li>
+        <li>
+          <%= link_to  calenders_path, class: "text-decoration-none" do %>
+            <i class="bi bi-calendar2-week"></i>Calender
+          <% end %>
+        </li>
+        <li>
+          <%= link_to  to_dos_path, class: "text-decoration-none" do %>
+            <i class="bi bi-journal"></i>To-Do
+          <% end %>
+        </li>
+        <li>
+          <%= link_to  contacts_path, class: "text-decoration-none" do %>
+            <i class="bi bi-people-fill"></i>Contact
+          <% end %>
+        </li>
+        <li>
+          <%= link_to  invoices_path, class: "text-decoration-none" do %>
+            <i class="bi bi-cash-stack"></i>Invoice
+          <% end %>
+        </li>
         <li><a href="#"><i class="bi bi-bar-chart"></i>Ui Elements</a></li>
-        <li><a href="#"><i class="bi bi-person"></i>Team</a></li>
+        <li>
+          <%= link_to  teams_path, class: "text-decoration-none" do %>
+            <i class="bi bi-person"></i>Team
+          <% end %>
+        </li>
         <li><a href="#"><i class="bi bi-table"></i>Table</a></li>
         <li>
         </li>

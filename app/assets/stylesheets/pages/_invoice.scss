@@ -1,0 +1,113 @@
+.invoice{
+  padding: 30px;
+  h1{
+    color: #202224;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.114px;
+  }
+  
+  .invoice-body{
+    border-radius: 14px;
+    border: 0.3px solid #B9B9B9;
+    background: #FFF;
+  }
+  .invoice-body{
+    padding: 40px 32px;
+    .invoice-header{
+      padding: 0px 0px 0px 115px;
+      margin-bottom: 58px;
+      .invoice-from, .invoice-to, .invoice-date, .due-date{
+        color: #404040;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .invoice-from-name, .invoice-to-name{
+        color: #404040;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 4px;
+      }
+      .invoice-address, .invoice-form{
+        color: #565656;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+    .invoice-table{
+      thead{
+        --bs-table-bg: #F1F4F9;
+        th{
+          color: #202224;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 500;
+          border-bottom-width: 0;
+          &:first-child {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+  
+          &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+        }
+      }
+      tbody{
+        td{
+          color: #292828;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 24px 0;
+        }
+      }
+
+      tfoot{
+        td{
+          color: #202224;
+          font-size: 16px;
+          font-weight: 800;
+          border-bottom-width: 0;
+          padding: 24px 0;
+        }
+      }
+    }
+    .invoce-action{
+      margin-top: 60px;
+      .btn-printer{
+        border-radius: 14px;
+        border: 0.3px solid #B9B9B9;
+        background: #FFF;
+        width: 54px;
+        height: 54px;
+        margin-right: 16px;
+      }
+      .btn-send{
+        border:none;
+        border-radius: 12px;
+        background: #4880FF;
+        p{
+          color: #FFF;
+          font-size: 16px;
+          font-weight: 700;
+          margin: 0;
+          padding: 16px 40px;
+        }
+        i{
+          width: 46px;
+          height: 38px;
+          background-color: rgba(255, 255, 255, 0.2);
+          color: white;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
