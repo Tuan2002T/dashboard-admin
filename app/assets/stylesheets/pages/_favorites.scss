@@ -1,0 +1,75 @@
+.favorites {
+  padding: 30px;
+  h1 {
+      color: #202224;
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 20px;
+  }
+  .card {
+    margin: 0;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card-body {
+      padding: 24px 16px;
+
+      .card-title {
+        color: #202224;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      .card-text {
+        color: #4880FF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      .bi-suit-heart-fill {
+        color: #ff4d4d;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        background-color: #f1f4fa;
+        padding: 10px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        
+        &:hover {
+          color: #ff0000;
+        }
+      }
+      
+
+      .btn-primary {
+        color: #202224;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 28px;
+        border-radius: 12px;
+        opacity: 0.7;
+        background: #E2EAF8;
+        border:none;
+        margin-top: 20px; 
+      }
+    }
+  }
+}

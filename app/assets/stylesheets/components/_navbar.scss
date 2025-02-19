@@ -1,83 +1,106 @@
 .navbar-custom {
   height: 70px;
-  background-color: #ffff;
-  .container-fluid{
-    .btn-navbar{
-      font-size: 24px;
-    }
-    .btn-navbar:hover{
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+
+  .btn-navbar {
+    font-size: 24px;
+
+    &:hover {
       background: #4880FF;
-      i{
+
+      i {
         color: #FFFFFF;
       }
     }
-    .search-wrapper{
-      .search-box {
-        position: relative;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  }
+
+  .search-wrapper {
+    .search-box {
+      position: relative;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 19px;
+      transition: all 0.3s ease;
+
+      .search-input {
+        width: 388px;
+        height: 38px;
         border-radius: 19px;
-        transition: all 0.3s ease;
-        .search-input {
-          width: 388px;
-          height: 38px;
-          border-radius: 19px;
-          border: 0.6px solid #D5D5D5;
-          background: #F5F6FA;
-          padding-left: 40px;
-          font-size: 14px;
-          line-height: normal;
-          font-weight: 400;
-        }
-        .icon-search {
-          position: absolute;
-          opacity: 0.5;
-          font-size: 15px;
-          margin-left: 16px;
-        }
-      }
-      
-    }
-    .profile{
-      img{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 16px;
-      }
-      .name{
+        border: 0.6px solid #D5D5D5;
+        background: #F5F6FA;
+        padding-left: 40px;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        font-weight: 400;
       }
-      .role{
-        color: #565656;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+
+      .icon-search {
+        position: absolute;
+        opacity: 0.5;
+        font-size: 15px;
+        margin-left: 16px;
       }
-      .dropdown{
-        .dropdown-toggle::after {
-          display: none !important;
-        }
-        .btn-small.dropdown-toggle {
-          width: 24px;
-          height: 24px;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 100%;
-          border: 1px solid #ccc;
-        }
-        
-        .custom-icon {
-          font-size: 10px;
-          width: 10px;
-          height: 10px;
-        }
-      }
+    }
+  }
+
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+
+  .name {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .role {
+    color: #565656;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .dropdown {
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    .btn-small.dropdown-toggle {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .custom-icon {
+      font-size: 10px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .search-wrapper {
+      display: none !important;
+    }
+
+    .profile-img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .name, .role {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container-fluid {
+      flex-direction: column;
     }
   }
 }

@@ -1,4 +1,4 @@
-  <div class= "wrapper navbar-top">
+  <div class= "wrapper navbar-left">
     <div class="sidebar">
       <div class="sidebar-header">
         <h3>Dash</h3><h3 class="header-end">Stack</h3>
@@ -14,12 +14,28 @@
             <i class="bi bi-grid-fill"></i> Products
           <% end %>
         </li>
-        <li><a href="#"><i class="bi bi-heart"></i>Favorites</a></li>
+        <li>
+          <%= link_to favorites_products_path, class: "text-decoration-none" do %>
+            <i class="bi bi-heart-fill"></i> Favorites
+          <% end %>
+        </li>
         <li><a href="#"><i class="bi bi-chat-right-dots"></i>Inbox</a></li>
-        <li><a href="#"><i class="bi bi-list-check"></i>Order Lists</a></li>
-        <li><a href="#"><i class="bi bi-list-task"></i>Product Stock</a></li>
+        <li>
+          <%= link_to order_lists_path, class: "text-decoration-none" do %>
+            <i class="bi bi-list-check"></i> Orders
+          <% end %>
+        </li>
+        <li>
+          <%= link_to  product_stocks_path, class: "text-decoration-none" do %>
+            <i class="bi bi-list-task"></i>Product Stock
+          <% end %>
+        </li>
         <li class="sidebar-header-2">PAGES</li>
-        <li><a href="#"><i class="bi bi-gift"></i>Pricing</a></li>
+        <li>
+          <%= link_to  pricings_path, class: "text-decoration-none" do %>
+            <i class="bi bi-currency-dollar"></i> Pricing
+          <% end %>
+        </li>
         <li><a href="#"><i class="bi bi-calendar2-week"></i>Calender</a></li>
         <li><a href="#"><i class="bi bi-journal"></i>To-Do</a></li>
         <li><a href="#"><i class="bi bi-people-fill"></i>Contact</a></li>

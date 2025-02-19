@@ -8,18 +8,32 @@ body{
   min-height: 100%;
 }
 
-.layout-container{
+.layout-container {
   display: flex;
   overflow: auto;
-  .sidebar{
+
+  .sidebar {
     width: 240px;
     background: #FFF;
     left: 0;
     top: 0;
+    transition: all 0.3s ease;
   }
-  .main-content{
+
+  .main-content {
     width: calc(100% - 240px);
     min-height: 100%;
     overflow: auto;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 991.98px) {
+    .sidebar {
+      display: none;
+    }
+
+    .main-content {
+      width: 100%;
+    }
   }
 }
